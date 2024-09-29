@@ -16,14 +16,14 @@
 
 buildPythonPackage rec {
   pname = "persistent";
-  version = "6.0";
+  version = "6.1";
   pyproject = true;
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-CDZQwP/ty4gDKJY8KUuVEaArawXkIec3p9Vfnu2I+18=";
+    hash = "sha256-qhfm5ISXONCAcG6+bHnsjbD0qyyHl1+bNCSer3qWWGc=";
   };
 
   build-system = [ setuptools ];
