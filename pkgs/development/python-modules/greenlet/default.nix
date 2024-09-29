@@ -24,12 +24,7 @@ let
       hash = "sha256-TOOsbNtq33lGR11+8xd3wm2UvMw3fgcKeYa9LVxRVGc=";
     };
 
-    patches = [
-      # https://github.com/python-greenlet/greenlet/pull/396
-      ./python-3.13-compat.patch
-    ];
-
-    nativeBuildInputs = [ setuptools ];
+    build-system = [ setuptools ];
 
     # tests in passthru, infinite recursion via objgraph/graphviz
     doCheck = false;
