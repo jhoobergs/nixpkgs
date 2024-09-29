@@ -17,14 +17,14 @@
 
 buildPythonPackage rec {
   pname = "numcodecs";
-  version = "0.12.1";
+  version = "0.13.0";
   pyproject = true;
 
   disabled = pythonOlder "3.8";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-BdkaQzcz5+7yaNfoDsImoCMtokQolhSo84JpAa7BCY4=";
+    hash = "sha256-uk+scDbqWgeMev4dTf/rloUIDULxnJwWsS2thmcDqi4=";
   };
 
   patches = [
