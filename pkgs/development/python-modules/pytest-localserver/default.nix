@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "pytest-localserver";
-  version = "0.8.1";
+  version = "0.9.0";
   format = "setuptools";
 
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ZlacNP7zGldQsW7/0c0SiKepC1kVXQBef5FqzNPe5PE=";
+    hash = "sha256-+voCggk37n050B11D9Bc6xl/xfPIlfgbysOCbbCQh+0=";
   };
 
   propagatedBuildInputs = [
