@@ -10,7 +10,7 @@
 }:
 
 buildPythonPackage rec {
-  version = "3.3.0";
+  version = "3.4.0";
   pname = "opt-einsum";
   pyproject = true;
 
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     pname = "opt_einsum";
     inherit version;
-    hash = "sha256-WfZHX3e7w33PfNdIUZwOxgci6R5jyhFOaIIcDFSkZUk=";
+    hash = "sha256-lspy8biG0UgkE0h4NJgZTFd/owqPqsEIWGsU8bpEc6w=";
   };
 
   patches = [
