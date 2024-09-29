@@ -17,12 +17,12 @@
 
 buildPythonPackage rec {
   pname = "netmiko";
-  version = "4.3.0";
+  version = "4.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-2pD2798ztBQOts1/InJ3PCzhRPp0rDTV7KwbTUYH8fs=";
+    hash = "sha256-Jf8SN5dqo/8srPBJSTFGOMiZIgoWdb0CnjGwfOIM47Y=";
   };
 
   postPatch = ''
