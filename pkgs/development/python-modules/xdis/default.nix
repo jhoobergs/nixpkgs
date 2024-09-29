@@ -10,7 +10,7 @@
 
 buildPythonPackage rec {
   pname = "xdis";
-  version = "6.1.0";
+  version = "6.1.1";
   format = "setuptools";
 
   disabled = pythonOlder "3.6";
@@ -19,7 +19,7 @@ buildPythonPackage rec {
     owner = "rocky";
     repo = "python-xdis";
     rev = "refs/tags/${version}";
-    hash = "sha256-KgKTO99T2/be1sBs5rY3Oy7/Yl9WGgdG3hqqkZ7D7ZY=";
+    hash = "sha256-Fn1cyUPMrn1SEXl4sdQwJiNHaY+BbxBDz3nKZY965/0=";
   };
 
   propagatedBuildInputs = [
