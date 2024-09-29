@@ -8,14 +8,14 @@
 
 buildPythonPackage rec {
   pname = "pathvalidate";
-  version = "3.2.0";
+  version = "3.2.1";
   format = "pyproject";
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-XoN4z2cSv/Z/vnqDB9mfqMGgyyiqR3BW+Pw3Tw3/JK0=";
+    hash = "sha256-9dB7HiN0GHBAYSofzSvLKRn42xgN8lTJWBu5C/kDN30=";
   };
 
   nativeBuildInputs = [ setuptools ];
