@@ -13,7 +13,7 @@
 
 buildPythonPackage rec {
   pname = "uharfbuzz";
-  version = "0.39.0";
+  version = "0.41.0";
   pyproject = true;
 
   disabled = pythonOlder "3.5";
@@ -23,7 +23,7 @@ buildPythonPackage rec {
     repo = "uharfbuzz";
     rev = "refs/tags/v${version}";
     fetchSubmodules = true;
-    hash = "sha256-I4fCaomq26FdkpiJdj+zyrbdqdynnD2hIutYTuTFvQs=";
+    hash = "sha256-N/Vprr1lJmDLUzf+aX374YbJhDuHOpPzNeYXpLOANeI=";
   };
 
   nativeBuildInputs = [
