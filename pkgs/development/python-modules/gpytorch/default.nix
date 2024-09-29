@@ -14,14 +14,14 @@
 
 buildPythonPackage rec {
   pname = "gpytorch";
-  version = "1.12";
+  version = "1.13";
   format = "pyproject";
 
   src = fetchFromGitHub {
     owner = "cornellius-gp";
     repo = pname;
     rev = "refs/tags/v${version}";
-    hash = "sha256-8W0QSiXl+C86m5yaI9KfGN92uA2VGjGwQt6DI/1NaQE=";
+    hash = "sha256-jdEJdUFIyM7TTKUHY8epjyZCGolH8nrr7FCyfw+x56s=";
   };
 
   patches = [
