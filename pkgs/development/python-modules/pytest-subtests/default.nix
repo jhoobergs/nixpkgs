@@ -23,7 +23,8 @@ buildPythonPackage rec {
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "pytest_subtests";
+    inherit version;
     hash = "sha256-mJ448PHAG8fGsuBNt9n9hZ2zXXfCwaQwyDGnDL8/3i0=";
   };
 
