@@ -16,7 +16,7 @@
 
 buildPythonPackage rec {
   pname = "webtest";
-  version = "3.0.0";
+  version = "3.0.1";
   format = "setuptools";
 
   disabled = pythonOlder "3.6";
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     pname = "WebTest";
     inherit version;
-    hash = "sha256-VL2WlyWDjZhhqfon+Nlx950nXZSuJV9cUB9Tu22ZKes=";
+    hash = "sha256-STtcgC+JSKZbXjoa1bJSTuXhq2DNcT2aPaO42ggsBv4=";
   };
 
   patches = [
