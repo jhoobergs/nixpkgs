@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "jaraco-collections";
-  version = "5.0.1";
+  version = "5.1.0";
   format = "pyproject";
 
   src = fetchPypi {
     pname = "jaraco.collections";
     inherit version;
-    hash = "sha256-gIYxsXS4Sk4qWSSQ1i9i38FdgEeg9xVyYJjcQ7gabPo=";
+    hash = "sha256-DkgpQJ05rRikCqZ1T+4nZ/TZcwxLpm3J34nx0nVplMI=";
   };
 
   postPatch = ''
