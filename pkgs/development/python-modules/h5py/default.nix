@@ -23,7 +23,7 @@ let
   mpiSupport = hdf5.mpiSupport;
 in
 buildPythonPackage rec {
-  version = "3.11.0";
+  version = "3.12.1";
   pname = "h5py";
   pyproject = true;
 
@@ -31,7 +31,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-e36PeAcqLt7IfJg28l80ID/UkqRHVwmhi0F6M8+yH6k=";
+    hash = "sha256-Mm1wtT0xuqYfALiqX5XC/LliGj7oNl13DFUaE9u8v98=";
   };
 
   patches = [
