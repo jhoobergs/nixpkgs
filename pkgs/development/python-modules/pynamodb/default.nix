@@ -14,7 +14,7 @@
 
 buildPythonPackage rec {
   pname = "pynamodb";
-  version = "6.0.0";
+  version = "6.0.1";
   format = "setuptools";
 
   disabled = pythonOlder "3.7";
@@ -23,7 +23,7 @@ buildPythonPackage rec {
     owner = "pynamodb";
     repo = "PynamoDB";
     rev = "refs/tags/${version}";
-    hash = "sha256-Ag/ivZ2SDYX0kwXbExt3kE/pMJgfoGc6gWoy+Rr6GTw=";
+    hash = "sha256-OcrES+1F95KjhRXpEukzbuDfTXU4hyJqxGjD1xMcdKE=";
   };
 
   build-system = [ setuptools ];
