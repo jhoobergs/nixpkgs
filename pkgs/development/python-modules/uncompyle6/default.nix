@@ -13,12 +13,12 @@
 
 buildPythonPackage rec {
   pname = "uncompyle6";
-  version = "3.9.1";
+  version = "3.9.2";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-xFHDjrPFzINOuLip5uCwzzIm5NlNCP0nbdA/6RWO2yc=";
+    hash = "sha256-b3CYD/4IpksRS2hxgy/QLYbJkDX4l2qPH4Eh2tb8pCU=";
   };
 
   propagatedBuildInputs = [
