@@ -11,14 +11,14 @@
 
 buildPythonPackage rec {
   pname = "mongomock";
-  version = "4.1.2";
+  version = "4.2.0.post1";
   format = "setuptools";
 
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-8GzWKvuK4+9jujE0mr0iCmV+8N1PAkOilYfFIT+TG30=";
+    hash = "sha256-kkHSzscnS5c22+jtrLGVKP9mrzs3ebMk157MQgEifzE=";
   };
 
   nativeBuildInputs = [ pbr ];
