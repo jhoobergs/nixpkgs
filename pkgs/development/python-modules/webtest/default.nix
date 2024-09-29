@@ -4,6 +4,7 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  setuptools,
   pastedeploy,
   pyquery,
   pytestCheckHook,
@@ -17,13 +18,12 @@
 buildPythonPackage rec {
   pname = "webtest";
   version = "3.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
-    pname = "WebTest";
-    inherit version;
+    inherit pname version;
     hash = "sha256-STtcgC+JSKZbXjoa1bJSTuXhq2DNcT2aPaO42ggsBv4=";
   };
 
@@ -36,7 +36,9 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  build-system = [ setuptools ];
+
+  dependencies = [
     beautifulsoup4
     six
     waitress
