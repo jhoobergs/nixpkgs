@@ -11,7 +11,7 @@
 
 buildPythonPackage rec {
   pname = "pyrdfa3";
-  version = "3.6.2";
+  version = "3.6.4";
   pyproject = true;
 
   disabled = pythonOlder "3.7";
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     inherit version;
     pname = "pyRdfa3";
-    hash = "sha256-c2gdq5V/YJAWlnZziLlWpXaccwvEUdpv+y8ONvGDFMI=";
+    hash = "sha256-ZHEtGkvyGCllKzlxW62m58A7zxnLSfliwZCjj0YXIkM=";
   };
 
   nativeBuildInputs = [ setuptools ];
