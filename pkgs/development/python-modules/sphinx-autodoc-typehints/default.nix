@@ -16,7 +16,7 @@ in
 
 buildPythonPackage {
   inherit pname version;
-  format = "pyproject";
+  pyproject = true;
 
   disabled = pythonOlder "3.7";
 
@@ -26,12 +26,14 @@ buildPythonPackage {
     hash = "sha256-50NRLaWLZ6BleaFGJ5imkHZkq3dGB1ikMjSt6sNQr78=";
   };
 
-  nativeBuildInputs = [
+  pythonRelaxDeps = [ "sphinx" ];
+
+  build-system = [
     hatch-vcs
     hatchling
   ];
 
-  propagatedBuildInputs = [ sphinx ];
+  dependencies = [ sphinx ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
