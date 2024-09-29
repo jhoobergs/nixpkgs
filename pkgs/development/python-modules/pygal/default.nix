@@ -20,12 +20,12 @@
 
 buildPythonPackage rec {
   pname = "pygal";
-  version = "3.0.4";
+  version = "3.0.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-bF2jPxBB6LMMvJgPijSRDZ7cWEuDMkApj2ol32VCUok=";
+    hash = "sha256-wKDzTlvBwBl1wr+4NCrVIeKTrULlJWmd0AxNelLBS3E=";
   };
 
   postPatch = ''
