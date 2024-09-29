@@ -14,7 +14,7 @@
 
 buildPythonPackage rec {
   pname = "stone";
-  version = "3.3.6";
+  version = "3.3.8";
   pyproject = true;
 
   disabled = pythonOlder "3.7";
@@ -39,7 +39,7 @@ buildPythonPackage rec {
     owner = "dropbox";
     repo = "stone";
     rev = "refs/tags/v${version}";
-    hash = "sha256-Og0hUUCCd9wRdHUhZBl62rDAunP2Bph5COsCw/T1kUA=";
+    hash = "sha256-W+wRVWPaAzhdHMVE54GEJC/YJqYZVJhwFDWWSMKUPdw=";
   };
 
   postPatch = ''
