@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "pympler";
-  version = "1.0.1";
+  version = "1.1";
 
   src = fetchPypi {
     pname = "Pympler";
     inherit version;
-    sha256 = "993f1a3599ca3f4fcd7160c7545ad06310c9e12f70174ae7ae8d4e25f6c5d3fa";
+    sha256 = "sha256-HqqGfLiZLCGEMPFwj9rM2lPfBkFE0cVlax5vHuYABCQ=";
   };
 
   patches = [
