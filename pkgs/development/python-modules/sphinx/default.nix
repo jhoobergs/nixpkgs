@@ -40,7 +40,7 @@
 
 buildPythonPackage rec {
   pname = "sphinx";
-  version = "7.3.7";
+  version = "7.4.7";
   format = "pyproject";
   disabled = pythonOlder "3.9";
 
@@ -55,7 +55,7 @@ buildPythonPackage rec {
       mv tests/roots/test-images/{testimäge,testimæge}.png
       sed -i 's/testimäge/testimæge/g' tests/{test_build*.py,roots/test-images/index.rst}
     '';
-    hash = "sha256-XGGRWEvd1SbQsK8W5yxDzBd5hlvXcDzr8t5Qa6skH/M=";
+    hash = "sha256-/lRPYhQrFZ+GhDd1X2/59cUbxnt/MEQfO2p4/APduNg=";
   };
 
   patches = [
