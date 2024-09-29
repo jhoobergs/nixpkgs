@@ -10,7 +10,7 @@
 
 buildPythonPackage rec {
   pname = "avro";
-  version = "1.11.3";
+  version = "1.12.0";
   pyproject = true;
 
   # distutils usage: https://github.com/search?q=repo%3Aapache%2Favro%20distutils&type=code
@@ -18,7 +18,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-M5O7UTn5zweR0gV1bOHjmltYWGr1sVPWo7WhmWEOnRc=";
+    hash = "sha256-ytnFOyPO7Wmceva93O1C4sVy/WtAjCV6fU/E6M8uLWs=";
   };
 
   postPatch = lib.optionalString (!pythonOlder "3.12") ''
