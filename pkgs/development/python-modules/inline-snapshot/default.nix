@@ -22,7 +22,7 @@
 
 buildPythonPackage rec {
   pname = "inline-snapshot";
-  version = "0.10.2";
+  version = "0.13.3";
   pyproject = true;
 
   disabled = pythonOlder "3.10";
@@ -31,7 +31,7 @@ buildPythonPackage rec {
     owner = "15r10nk";
     repo = "inline-snapshot";
     rev = "refs/tags/v${version}";
-    hash = "sha256-19rvhqYkM3QiD0La5TRi/2uKza8HW/bnXeGAhOZ/bgs=";
+    hash = "sha256-hwt/EFYedrml0x58Rd1AjqrIlELAXp1ku8v7glhCebE=";
   };
 
   build-system = [ poetry-core ];
