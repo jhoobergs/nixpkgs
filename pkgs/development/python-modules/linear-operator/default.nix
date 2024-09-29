@@ -14,14 +14,14 @@
 
 buildPythonPackage rec {
   pname = "linear-operator";
-  version = "0.5.2";
+  version = "0.5.3";
   format = "pyproject";
 
   src = fetchFromGitHub {
     owner = "cornellius-gp";
     repo = "linear_operator";
     rev = "refs/tags/v${version}";
-    hash = "sha256-OuE6jx9Q4IU+b2a+mrglRdBOReN1tt/thetNXxwk1GI=";
+    hash = "sha256-fKDVaHyaneV6MafJd/RT2InZO5cuYoC36YgzQhfIH8g=";
   };
 
   nativeBuildInputs = [
