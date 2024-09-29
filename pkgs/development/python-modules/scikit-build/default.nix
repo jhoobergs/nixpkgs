@@ -24,7 +24,7 @@
 
 buildPythonPackage rec {
   pname = "scikit-build";
-  version = "0.18.0";
+  version = "0.18.1";
   pyproject = true;
 
   disabled = pythonOlder "3.7";
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     pname = "scikit_build";
     inherit version;
-    hash = "sha256-caE69GfRo4UQw0lHhuLttz6tU+qSK95uUZ3FNyqmUJY=";
+    hash = "sha256-pBUqxaCE1JnCineXvgYo2DZsM24vsOGgY+sy5V78uOc=";
   };
 
   patches = [
