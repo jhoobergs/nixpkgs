@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "glad2";
-  version = "2.0.6";
+  version = "2.0.8";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-CGFa7TIZ6hx3WEvVlh2CO6sib4rDgx0JrfZcb6h3+Ow=";
+    hash = "sha256-uEB5ufpATzcXG5Yb3R2NohNw5sgY3vuEgcWz/j1kNto=";
   };
 
   propagatedBuildInputs = [ jinja2 ];
