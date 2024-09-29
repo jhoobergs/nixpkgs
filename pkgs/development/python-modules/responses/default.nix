@@ -19,7 +19,7 @@
 
 buildPythonPackage rec {
   pname = "responses";
-  version = "0.25.0";
+  version = "0.25.3";
   pyproject = true;
 
   disabled = pythonOlder "3.8";
@@ -30,7 +30,7 @@ buildPythonPackage rec {
     owner = "getsentry";
     repo = pname;
     rev = "refs/tags/${version}";
-    hash = "sha256-FHtuZ6NUmCveAJOXEajfTLRMR8W1Jz/pjFKdE6PHW2g=";
+    hash = "sha256-+iRrmRAe8RWcts2LMFvykroQ5sL7+hW6Wrs7Kd1mzBM=";
   };
 
   patches = [
