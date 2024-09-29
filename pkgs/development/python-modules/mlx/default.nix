@@ -16,7 +16,7 @@ let
   gguf-tools = fetchFromGitHub {
     owner = "antirez";
     repo = "gguf-tools";
-    rev = "af7d88d808a7608a33723fba067036202910acb3";
+    rev = "refs/tags/v${version}";
     hash = "sha256-LqNvnUbmq0iziD9VP5OTJCSIy+y/hp5lKCUV7RtKTvM=";
   };
   nlohmann_json = fetchFromGitHub {
@@ -28,13 +28,13 @@ let
 in
 buildPythonPackage rec {
   pname = "mlx";
-  version = "0.15.1";
+  version = "0.18.0";
 
   src = fetchFromGitHub {
     owner = "ml-explore";
     repo = "mlx";
     rev = "refs/tags/v${version}";
-    hash = "sha256-+vgHEt+L91YJLpQo4bps+Rnm/TS1PAPXNohdICGK6GE=";
+    hash = "sha256-eFKjCrutqrmhZKzRrLq5nYl0ieqLvoXpbnTxA1NEhWo=";
   };
 
   pyproject = true;
