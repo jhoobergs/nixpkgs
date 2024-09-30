@@ -33,7 +33,8 @@ buildPythonPackage rec {
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "google_auth";
+    inherit version;
     hash = "sha256-9MZO1OAejotkbvNMAY+L8zON8MjjfYs7ukDn9XSjJ4o=";
   };
 
