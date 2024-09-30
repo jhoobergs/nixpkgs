@@ -25,7 +25,8 @@ buildPythonPackage rec {
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "google_api_core";
+    inherit version;
     hash = "sha256-903/GIm6KRpLdsUHnfBxGBDi2dqBq/3JmVe8lhweso8=";
   };
 
