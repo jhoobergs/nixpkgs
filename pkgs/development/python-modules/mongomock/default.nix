@@ -2,29 +2,35 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  hatch-vcs,
+  hatchling,
   packaging,
-  pbr,
   pytestCheckHook,
   pythonOlder,
+  pytz,
   sentinels,
 }:
 
 buildPythonPackage rec {
   pname = "mongomock";
   version = "4.2.0.post1";
-  format = "setuptools";
+  pyproject = true;
 
-  disabled = pythonOlder "3.6";
+  disabled = pythonOlder "3.8";
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-kkHSzscnS5c22+jtrLGVKP9mrzs3ebMk157MQgEifzE=";
   };
 
-  nativeBuildInputs = [ pbr ];
+  build-system = [
+    hatch-vcs
+    hatchling
+  ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     packaging
+    pytz
     sentinels
   ];
 
@@ -33,8 +39,9 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "mongomock" ];
 
   meta = with lib; {
-    homepage = "https://github.com/mongomock/mongomock";
     description = "Fake pymongo stub for testing simple MongoDB-dependent code";
+    homepage = "https://github.com/mongomock/mongomock";
+    changelog = "https://github.com/mongomock/mongomock/blob/${version}/CHANGELOG.md";
     license = licenses.bsd3;
     maintainers = with maintainers; [ gador ];
   };
