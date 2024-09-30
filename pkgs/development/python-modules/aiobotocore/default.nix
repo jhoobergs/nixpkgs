@@ -35,20 +35,18 @@ buildPythonPackage rec {
 
   # Relax version constraints: aiobotocore works with newer botocore versions
   # the pinning used to match some `extras_require` we're not using.
-  postPatch = ''
-    sed -i "s/'botocore>=.*'/'botocore'/" setup.py
-  '';
+  pythonRelaxDeps = [ "botocore" ];
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     aioitertools
     botocore
     wrapt
   ];
 
-  passthru.optional-dependencies = {
+  optional-dependencies = {
     awscli = [ awscli ];
     boto3 = [ boto3 ];
   };
