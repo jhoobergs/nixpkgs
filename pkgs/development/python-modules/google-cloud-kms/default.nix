@@ -21,13 +21,14 @@ buildPythonPackage rec {
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "google_cloud_kms";
+    inherit version;
     hash = "sha256-6eGLv6/RpANcdsA/tf8D9PV/WW0I4ant5+aewBUbJ6E=";
   };
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     grpc-google-iam-v1
     google-api-core
     proto-plus
