@@ -25,13 +25,15 @@ let self = buildPythonPackage rec {
 
   build-system = [ pdm-backend ];
 
-  dependencies = [ typer ];
+  dependencies = [
+    typer
+    uvicorn
+  ] ++ uvicorn.optional-dependencies.standard;
 
   optional-dependencies = {
     standard = [
-      fastapi
       uvicorn
-    ];
+    ] ++ uvicorn.optional-dependencies.standard;
   };
 
   doCheck = false;
