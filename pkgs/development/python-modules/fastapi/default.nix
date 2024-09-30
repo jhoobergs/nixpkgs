@@ -16,6 +16,7 @@
   # tests
   dirty-equals,
   flask,
+  inline-snapshot,
   passlib,
   pyjwt,
   pytest-asyncio,
@@ -86,6 +87,7 @@ buildPythonPackage rec {
   nativeCheckInputs = [
     dirty-equals
     flask
+    inline-snapshot
     passlib
     pyjwt
     pytestCheckHook
