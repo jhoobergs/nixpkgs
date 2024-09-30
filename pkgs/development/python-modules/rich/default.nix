@@ -19,6 +19,7 @@
   attrs,
   pytestCheckHook,
   setuptools,
+  which,
 
   # for passthru.tests
   enrich,
@@ -56,6 +57,7 @@ buildPythonPackage rec {
     attrs
     pytestCheckHook
     setuptools
+    which
   ];
 
   disabledTests = [
