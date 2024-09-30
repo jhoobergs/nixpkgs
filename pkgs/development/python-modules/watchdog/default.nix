@@ -6,6 +6,7 @@
   eventlet,
   fetchPypi,
   flaky,
+  pytest-cov-stub,
   pytest-timeout,
   pytestCheckHook,
   pythonOlder,
@@ -37,6 +38,7 @@ buildPythonPackage rec {
   nativeCheckInputs = [
     eventlet
     flaky
+    pytest-cov-stub
     pytest-timeout
     pytestCheckHook
   ] ++ passthru.optional-dependencies.watchmedo;
