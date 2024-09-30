@@ -68,7 +68,7 @@ let
     owner = "ibis-project";
     repo = "testing-data";
     # https://github.com/ibis-project/ibis/blob/9.1.0/nix/overlay.nix#L20-L26
-    rev = "refs/tags/${version}";
+    rev = "6737d1cb5951cabaccd095a3ae62a93dbd11ecb9";
     hash = "sha256-MoVTZPWh4KVlrICYACrgfeLdl/fqoa1iweNg3zUtdrs=";
   };
 in
