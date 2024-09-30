@@ -16,7 +16,7 @@ let
   test_data = fetchFromGitHub {
     owner = "pydicom";
     repo = "pydicom-data";
-    rev = "refs/tags/v${version}";
+    rev = "cbb9b2148bccf0f550e3758c07aca3d0e328e768";
     hash = "sha256-nF/j7pfcEpWHjjsqqTtIkW8hCEbuQ3J4IxpRk0qc1CQ=";
   };
 in
