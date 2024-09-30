@@ -8,6 +8,7 @@
 
   # dependencies
   colorama,
+  httpx,
   sphinx,
   starlette,
   uvicorn,
@@ -34,6 +35,7 @@ buildPythonPackage rec {
 
   dependencies = [
     colorama
+    httpx
     sphinx
     starlette
     uvicorn
