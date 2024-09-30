@@ -6,7 +6,6 @@
   pythonOlder,
   setuptools,
   borgbackup,
-  setuptools,
 }:
 
 buildPythonPackage rec {
