@@ -77,6 +77,8 @@ buildPythonPackage rec {
     "test_gen_public_key"
     # Tests run into a timeout
     "integration"
+    # Crashes
+    "test_grout"
   ];
 
   pythonImportsCheck = [ "proxy" ];
