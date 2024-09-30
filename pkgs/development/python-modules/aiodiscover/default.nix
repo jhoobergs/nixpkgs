@@ -8,11 +8,12 @@
   fetchFromGitHub,
   ifaddr,
   netifaces,
+  poetry-core,
   pyroute2,
   pytest-asyncio,
+  pytest-cov-stub,
   pytestCheckHook,
   pythonOlder,
-  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -29,9 +30,9 @@ buildPythonPackage rec {
     hash = "sha256-A12YeNIm9Pv4zpzaejTk8VvLzKLHxZV2EzVpchLX1k8=";
   };
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     async-timeout
     aiodns
     cached-ipaddress
@@ -43,6 +44,7 @@ buildPythonPackage rec {
 
   nativeCheckInputs = [
     pytest-asyncio
+    pytest-cov-stub
     pytestCheckHook
   ];
 
