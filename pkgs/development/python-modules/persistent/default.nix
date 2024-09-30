@@ -26,9 +26,14 @@ buildPythonPackage rec {
     hash = "sha256-qhfm5ISXONCAcG6+bHnsjbD0qyyHl1+bNCSer3qWWGc=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools<74" "setuptools"
+  '';
+
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     zope-interface
     zope-deferredimport
   ]
