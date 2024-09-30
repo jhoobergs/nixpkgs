@@ -14,10 +14,11 @@ buildPythonPackage rec {
   version = "12.23.1";
   format = "setuptools";
 
-  disabled = pythonOlder "3.7";
+  disabled = pythonOlder "3.8";
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "azure_storage_blob";
+    inherit version;
     hash = "sha256-pYflTU450qJ711EJ2xZP+iBY/hlAYeVEbFqJvKkYJy8=";
   };
 
