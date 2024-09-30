@@ -26,6 +26,7 @@
   httpx,
   psutil,
   pytest-asyncio,
+  pytest-cov-stub,
   pytestCheckHook,
   redis,
   redis-server,
@@ -66,6 +67,7 @@ buildPythonPackage rec {
       httpx
       psutil
       pytest-asyncio
+      pytest-cov-stub
       pytestCheckHook
       redis
       requests
