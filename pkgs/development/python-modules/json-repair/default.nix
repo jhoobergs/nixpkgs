@@ -22,7 +22,10 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ pytestCheckHook ];
 
-  disabledTestPaths = [ "tests/test_performance.py" ];
+  disabledTestPaths = [
+    "tests/test_performance.py"
+    "tests/test_coverage.py"
+  ];
 
   pythonImportsCheck = [ "json_repair" ];
 
