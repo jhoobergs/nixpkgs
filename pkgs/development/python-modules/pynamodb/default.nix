@@ -4,6 +4,7 @@
   botocore,
   buildPythonPackage,
   fetchFromGitHub,
+  freezegun,
   pytest-env,
   pytest-mock,
   pytestCheckHook,
@@ -15,7 +16,7 @@
 buildPythonPackage rec {
   pname = "pynamodb";
   version = "6.0.1";
-  format = "setuptools";
+  pyproject= true;
 
   disabled = pythonOlder "3.7";
 
@@ -35,6 +36,7 @@ buildPythonPackage rec {
   };
 
   nativeCheckInputs = [
+    freezegun
     pytest-env
     pytest-mock
     pytestCheckHook
