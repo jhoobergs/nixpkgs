@@ -20,6 +20,7 @@
   cloudpickle,
   email-validator,
   dirty-equals,
+  jsonschema,
   pytestCheckHook,
   pytest-mock,
   eval-type-backport,
@@ -61,6 +62,7 @@ buildPythonPackage rec {
     [
       cloudpickle
       dirty-equals
+      jsonschema
       pytest-mock
       pytestCheckHook
       rich
