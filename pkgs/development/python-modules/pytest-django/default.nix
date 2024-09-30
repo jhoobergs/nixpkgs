@@ -10,13 +10,15 @@
   pytest-xdist,
   pytestCheckHook,
 }:
+
 buildPythonPackage rec {
   pname = "pytest-django";
   version = "4.9.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "pytest_django";
+    inherit version;
     hash = "sha256-i/e8NYya5vb8UbbOuxkP4gISGW5oBxIfEb1qOwNCgxQ=";
   };
 
