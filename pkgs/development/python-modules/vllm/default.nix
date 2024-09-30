@@ -51,7 +51,7 @@ let
   cutlass = fetchFromGitHub {
     owner = "NVIDIA";
     repo = "cutlass";
-    rev = "refs/tags/v${version}";
+    rev = "refs/tags/v3.5.0";
     sha256 = "sha256-D/s7eYsa5l/mfx73tE4mnFcTQdYqGmXa9d9TCryw4e4=";
   };
 in
