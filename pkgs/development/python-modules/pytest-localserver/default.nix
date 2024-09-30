@@ -5,26 +5,31 @@
   fetchPypi,
   werkzeug,
   pythonOlder,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {
   pname = "pytest-localserver";
   version = "0.9.0";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = pythonOlder "3.6";
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "pytest_localserver";
+    inherit version;
     hash = "sha256-+voCggk37n050B11D9Bc6xl/xfPIlfgbysOCbbCQh+0=";
   };
 
-  propagatedBuildInputs = [
-    aiosmtpd
-    werkzeug
-  ];
+  build-system = [ setuptools-scm ];
 
-  # all tests access network: does not work in sandbox
+  dependencies = [ werkzeug ];
+
+  optional-dependencies = {
+    smtp = [ aiosmtpd ];
+  };
+
+  # All tests access network: does not work in sandbox
   doCheck = false;
 
   pythonImportsCheck = [ "pytest_localserver" ];
