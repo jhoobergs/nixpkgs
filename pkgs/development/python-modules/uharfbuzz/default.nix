@@ -5,6 +5,7 @@
   fetchFromGitHub,
   pythonOlder,
   cython,
+  pkgconfig,
   setuptools,
   setuptools-scm,
   pytestCheckHook,
@@ -26,8 +27,14 @@ buildPythonPackage rec {
     hash = "sha256-N/Vprr1lJmDLUzf+aX374YbJhDuHOpPzNeYXpLOANeI=";
   };
 
-  nativeBuildInputs = [
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools >= 36.4, < 72.2" setuptools
+  '';
+
+  build-system = [
     cython
+    pkgconfig
     setuptools
     setuptools-scm
   ];
