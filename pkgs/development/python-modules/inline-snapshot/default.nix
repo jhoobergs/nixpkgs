@@ -7,8 +7,9 @@
   dirty-equals,
   executing,
   fetchFromGitHub,
+  hatchling,
   hypothesis,
-  poetry-core,
+  pydantic,
   pyright,
   pytest-subtests,
   pytest-xdist,
@@ -18,6 +19,7 @@
   time-machine,
   toml,
   types-toml,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
@@ -34,21 +36,26 @@ buildPythonPackage rec {
     hash = "sha256-hwt/EFYedrml0x58Rd1AjqrIlELAXp1ku8v7glhCebE=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
-  dependencies = [
-    asttokens
-    black
-    click
-    executing
-    rich
-    toml
-    types-toml
-  ];
+  dependencies =
+    [
+      asttokens
+      black
+      click
+      executing
+      rich
+      typing-extensions
+    ]
+    ++ lib.optionals (pythonOlder "3.11") [
+      types-toml
+      toml
+    ];
 
   nativeCheckInputs = [
     dirty-equals
     hypothesis
+    pydantic
     pyright
     pytest-subtests
     pytest-xdist
