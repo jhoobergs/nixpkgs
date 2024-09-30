@@ -22,11 +22,11 @@ buildPythonPackage rec {
   };
 
   postPatch = ''
-    substituteInPlace setup.cfg \
-      --replace "pytest-runner" ""
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools>=39.2,<72"' '"setuptools"'
   '';
 
-  nativeBuildInputs = [
+  build-system = [
     setuptools
     setuptools-scm
   ];
