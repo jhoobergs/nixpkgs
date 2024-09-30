@@ -29,7 +29,8 @@ buildPythonPackage rec {
   __darwinAllowLocalNetworking = true;
 
   src = fetchPypi {
-    inherit pname version;
+    pname = "azure_core";
+    inherit version;
     hash = "sha256-ZWoN1h4YabFQa3xqOzHWLxWYSxpXPWMm9qovPkEjKEs=";
   };
 
