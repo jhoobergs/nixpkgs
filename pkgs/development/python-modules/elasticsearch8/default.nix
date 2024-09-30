@@ -4,10 +4,10 @@
   buildPythonPackage,
   elastic-transport,
   fetchPypi,
+  hatchling,
   orjson,
   pythonOlder,
   requests,
-  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-DLxNuA25hQ5p1I2QSrrpLid6EI/0hmaF+zFYE1pS2SE=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [ elastic-transport ];
 
