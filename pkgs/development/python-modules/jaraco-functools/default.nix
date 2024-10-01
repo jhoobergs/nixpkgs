@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  jaraco_classes,
+  jaraco-classes,
   more-itertools,
   pytestCheckHook,
   setuptools-scm,
@@ -31,7 +31,7 @@ buildPythonPackage rec {
   dependencies = [ more-itertools ];
 
   nativeCheckInputs = [
-    jaraco_classes
+    jaraco-classes
     pytestCheckHook
   ];
 
