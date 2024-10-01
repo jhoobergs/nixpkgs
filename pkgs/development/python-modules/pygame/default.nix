@@ -43,7 +43,7 @@ buildPythonPackage rec {
     # Unicode file names lead to different checksums on HFS+ vs. other
     # filesystems because of unicode normalisation. The documentation
     # has such files and will be removed.
-    hash = "sha256-lYs05BMTGpnZG5AmRge8pwl6ZcPc+1aqX/D3OhJA18c=";
+    hash = "sha256-wNXcmH0IIuAOoomIdmhAPxe4TiEzes3Kq+Vth2r4/IA=";
     postFetch = "rm -rf $out/docs/reST";
   };
 
