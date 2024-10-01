@@ -98,7 +98,6 @@ in
 
       # Needed by Xfce's xinitrc script
       xdg-user-dirs # Update user dirs as described in https://freedesktop.org/wiki/Software/xdg-user-dirs/
-      xdg-user-dirs-gtk
 
       exo
       garcon

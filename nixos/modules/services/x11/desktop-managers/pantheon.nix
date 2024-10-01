@@ -214,7 +214,6 @@ in
         onboard
         sound-theme-freedesktop
         xdg-user-dirs # Update user dirs as described in https://freedesktop.org/wiki/Software/xdg-user-dirs/
-        xdg-user-dirs-gtk
       ]) ++ (with pkgs.pantheon; [
         # Artwork
         elementary-gtk-theme

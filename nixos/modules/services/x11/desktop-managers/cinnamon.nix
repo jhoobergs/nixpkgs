@@ -169,7 +169,6 @@ in
         # other
         glib # for gsettings
         xdg-user-dirs
-        xdg-user-dirs-gtk
       ] ++ utils.removePackagesByName [
         # accessibility
         onboard

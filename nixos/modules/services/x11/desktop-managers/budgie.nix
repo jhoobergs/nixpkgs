@@ -139,7 +139,6 @@ in {
 
         # Update user directories.
         xdg-user-dirs
-        xdg-user-dirs-gtk
       ]
       ++ lib.optional config.networking.networkmanager.enable pkgs.networkmanagerapplet
       ++ (utils.removePackagesByName [

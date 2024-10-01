@@ -71,7 +71,6 @@ in
           pkgs.gtk3.out
           pkgs.shared-mime-info
           pkgs.xdg-user-dirs # Update user dirs as described in https://freedesktop.org/wiki/Software/xdg-user-dirs/
-          pkgs.xdg-user-dirs-gtk
           pkgs.yelp # for 'Contents' in 'Help' menus
         ])
         config.environment.mate.excludePackages;
