@@ -37,9 +37,9 @@ buildPythonPackage rec {
 
   patches = [
     (fetchpatch2 {
-      name = "setuptools-70.2.0-compat.patch";
-      url = "https://github.com/scikit-build/scikit-build/commit/7005897053bc5c71d823c36bbd89bd43121670f1.patch";
-      hash = "sha256-YGNCS1AXnqHQMd40CDePVNAzLe5gQ/nJxASAZafsxK8=";
+      name = "setuptools-75.0-compat.patch";
+      url = "https://github.com/scikit-build/scikit-build/commit/3992485c67331097553ec8f54233c4c295943f70.patch";
+      hash = "sha256-U34UY+m6RE3c3UN/jGHuR+sRUqTGmG7dT52NWCY7nIE=";
     })
   ];
 
