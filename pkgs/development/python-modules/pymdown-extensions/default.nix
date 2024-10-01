@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  fetchpatch2,
   hatchling,
   pytestCheckHook,
   markdown,
@@ -55,14 +54,6 @@ buildPythonPackage rec {
     rev = "refs/tags/${version}";
     hash = "sha256-4e1fiyBFsMxlUGN1yQ5Xncp7r2+VWWp3GU9o7bOZU30=";
   };
-
-  patches = [
-    (fetchpatch2 {
-      name = "pymdown-extensions-pygments-compat.patch";
-      url = "https://github.com/facelessuser/pymdown-extensions/commit/f1e2fad862c9738e420b8451dfdfbd9e90e849fc.patch";
-      hash = "sha256-ENYTRXBJ76VPhhab8MdOh+bkcQNRklXT3thvPi+gHIY=";
-    })
-  ];
 
   build-system = [ hatchling ];
 
