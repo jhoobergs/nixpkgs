@@ -4,6 +4,7 @@
   fetchPypi,
   pythonOlder,
   setuptools,
+  setuptools-scm,
   packaging,
   tomli,
 
@@ -23,9 +24,12 @@ buildPythonPackage rec {
     hash = "sha256-f8lZ5I5uxdWvi9Am9p9eJNCLPLirs0IXb1q4AwzAfXo=";
   };
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     packaging
     setuptools
   ] ++ lib.optionals (pythonOlder "3.11") [ tomli ];
