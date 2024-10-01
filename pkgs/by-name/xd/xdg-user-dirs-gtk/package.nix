@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   patches = [
     # Fix cross: ./configure: line 7633: no: command not found
     (fetchpatch {
-      url = "https://salsa.debian.org/gnome-team/xdg-user-dirs-gtk/-/blob/b047b613d5f18aebe8e9bca4e0a82b75b2d1f8c4/debian/patches/fix-pkg-config-cross-compilation.patch";
+      url = "https://salsa.debian.org/gnome-team/xdg-user-dirs-gtk/-/raw/b047b613d5f18aebe8e9bca4e0a82b75b2d1f8c4/debian/patches/fix-pkg-config-cross-compilation.patch";
       hash = "sha256-QHq8hlX0SS+T6jtagMs9qApJCWFG1PHxftzoID2Nag4=";
     })
   ];
