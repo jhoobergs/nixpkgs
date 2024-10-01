@@ -10,6 +10,7 @@
   ninja,
   pkg-config,
   vala,
+  mesonEmulatorHook,
   gtk3,
   icu,
   enchant2,
@@ -42,6 +43,8 @@ stdenv.mkDerivation rec {
     ninja
     pkg-config
     vala
+  ] ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
+    mesonEmulatorHook
   ];
 
   buildInputs = [
