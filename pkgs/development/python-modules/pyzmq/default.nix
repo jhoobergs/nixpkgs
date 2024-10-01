@@ -15,7 +15,6 @@
 
   # checks
   pytestCheckHook,
-  python,
   pythonOlder,
   tornado,
   libsodium,
@@ -60,13 +59,9 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "zmq" ];
 
-  pytestFlagsArray = [
-    "$out/${python.sitePackages}/zmq/tests/" # Folder with tests
-    # pytest.ini is missing in pypi's sdist
-    # https://github.com/zeromq/pyzmq/issues/1853#issuecomment-1592731986
-    "--asyncio-mode auto"
-    "--ignore=$out/lib/python3.12/site-packages/zmq/tests/test_mypy.py"
-  ];
+  preCheck = ''
+    rm -r zmq
+  '';
 
   disabledTests = [
     # Tests hang
