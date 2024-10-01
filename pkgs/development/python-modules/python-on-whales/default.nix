@@ -24,9 +24,9 @@ buildPythonPackage rec {
     hash = "sha256-i2lctR5V4hF/cS46d+TW73iKZ+2G/UwiHMNbtP/Z7xo=";
   };
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pydantic
     requests
     tqdm
@@ -34,6 +34,7 @@ buildPythonPackage rec {
   ];
 
   doCheck = false; # majority of tests require Docker and/or network access
+
   pythonImportsCheck = [ "python_on_whales" ];
 
   meta = with lib; {
