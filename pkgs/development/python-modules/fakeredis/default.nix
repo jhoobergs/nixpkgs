@@ -12,6 +12,7 @@
   pytestCheckHook,
   pythonOlder,
   redis,
+  redis-server,
   sortedcontainers,
 }:
 
@@ -52,6 +53,17 @@ buildPythonPackage rec {
   };
 
   pythonImportsCheck = [ "fakeredis" ];
+
+  pytestFlagsArray = [ "-m 'not slow'" ];
+
+  preCheck = ''
+    ${lib.getExe' redis-server "redis-server"} --port 6390 &
+    REDIS_PID=$!
+  '';
+
+  postCheck = ''
+    kill $REDIS_PID
+  '';
 
   disabledTests = [
     # AssertionError
